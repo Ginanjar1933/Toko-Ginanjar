@@ -1,0 +1,121 @@
+body {
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    min-height: 100vh;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.star {
+    --star-color: #3498db;
+    --star-tail-length: 20em;  /* Lebih pendek */
+    --star-tail-height: 1.5px;
+    --star-width: calc(var(--star-tail-length) / 6);
+    --fall-duration: 4s;  /* Lebih cepat */
+    --tail-fade-duration: var(--fall-duration);
+
+    position: absolute;
+    top: var(--top-offset);
+    left: 0;
+    width: var(--star-tail-length);
+    height: var(--star-tail-height);
+    color: var(--star-color);
+    background: linear-gradient(45deg, currentColor, transparent);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px currentColor);
+    transform: translate3d(104em, 0, 0);
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite, 
+               tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+}
+
+.star::before, .star::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(45deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+}
+
+.star::before {
+    transform: rotate(45deg);
+}
+
+.star::after {
+    transform: rotate(-45deg);
+}
+
+/* Generate 100 stars with faster animations */
+@media screen {
+    .star:nth-child(1) { --top-offset: 95vh; --fall-duration: 3.1s; --fall-delay: 0.1s; }
+    .star:nth-child(2) { --top-offset: 100vh; --fall-duration: 3.2s; --fall-delay: 0.1s; }
+    .star:nth-child(3) { --top-offset: 35vh; --fall-duration: 4.1s; --fall-delay: 0.2s; }
+    .star:nth-child(4) { --top-offset: 30vh; --fall-duration: 4.2s; --fall-delay: 0.2s; }
+    .star:nth-child(5) { --top-offset: 45vh; --fall-duration: 5.1s; --fall-delay: 0.3s; }
+    .star:nth-child(6) { --top-offset: 40vh; --fall-duration: 5.2s; --fall-delay: 0.3s; }
+    .star:nth-child(7) { --top-offset: 25vh; --fall-duration: 6.1s; --fall-delay: 0.4s; }
+    .star:nth-child(8) { --top-offset: 20vh; --fall-duration: 6.2s; --fall-delay: 0.4s; }
+    .star:nth-child(9) { --top-offset: 85vh; --fall-duration: 3.1s; --fall-delay: 0.5s; }
+    .star:nth-child(10) { --top-offset: 80vh; --fall-duration: 3.2s; --fall-delay: 0.5s; }
+    .star:nth-child(11) { --top-offset: 15vh; --fall-duration: 5.1s; --fall-delay: 0.6s; }
+    .star:nth-child(12) { --top-offset: 10vh; --fall-duration: 5.2s; --fall-delay: 0.6s; }
+    .star:nth-child(13) { --top-offset: 65vh; --fall-duration: 4.1s; --fall-delay: 0.7s; }
+    .star:nth-child(14) { --top-offset: 60vh; --fall-duration: 4.2s; --fall-delay: 0.7s; }
+    .star:nth-child(15) { --top-offset: 75vh; --fall-duration: 6.1s; --fall-delay: 0.8s; }
+    .star:nth-child(16) { --top-offset: 70vh; --fall-duration: 6.2s; --fall-delay: 0.8s; }
+    .star:nth-child(17) { --top-offset: 55vh; --fall-duration: 7.1s; --fall-delay: 0.9s; }
+    .star:nth-child(18) { --top-offset: 50vh; --fall-duration: 7.3s; --fall-delay: 0.9s; }
+    .star:nth-child(19) { --top-offset: 20vh; --fall-duration: 2.1s; --fall-delay: 0.10s; }
+    .star:nth-child(20) { --top-offset: 25vh; --fall-duration: 2.3s; --fall-delay: 0.10s; }
+    
+    /* Tambahkan lebih banyak star dengan delay berbeda */
+}
+
+@keyframes fall {
+    to {
+        transform: translate3d(-50em, 0, 0); /* Jarak jatuh lebih jauh */
+    }
+}
+
+@keyframes tail-fade {
+    0%, 50% {
+        width: var(--star-tail-length);
+        opacity: 1;
+    }
+    70%, 80% {
+        width: 0;
+        opacity: 0.4;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .star {
+        animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+    }
+}
+@function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+  }

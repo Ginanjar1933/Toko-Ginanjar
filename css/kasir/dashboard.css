@@ -1,0 +1,31 @@
+.kasir-container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh;
+}
+
+.kasir-sidebar {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.kasir-content {
+    padding: 2rem;
+    background: var(--light-gray);
+}
+
+.today-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
