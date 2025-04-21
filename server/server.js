@@ -11,7 +11,7 @@ connectDB();
 
 // Middlewares
 const corsOptions = {
-    origin: ['http://127.0.0.1:5500', 'http://localhost:5500'],
+    origin: ['https://toko-ginanjar.vercel.app', 'http://localhost:5500'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: false // Change to false since we don't need credentials for now
