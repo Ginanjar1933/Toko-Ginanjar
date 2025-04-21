@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Produk - Admin</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/admin/products.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <!-- Sidebar menu -->
+        </aside>
+
+        <main class="content">
+            <div class="content-header">
+                <h1>Manajemen Produk</h1>
+                <button class="btn-primary" onclick="location.href='tambah-produk.html'">
+                    + Tambah Produk
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Nama Produk</th>
+                            <th>Kategori</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- Data produk akan dimuat dinamis -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../../js/admin/produk.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="457807159027-25ijsc4a61se4nr27vovj7aa2qlocu6l.apps.googleusercontent.com">
+    <title>Daftar - Toko Online</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/background.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/auth/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://unpkg.com/jwt-decode@3.1.2/build/jwt-decode.js"></script>
+</head>
+<body>
+    <div class="stars">
+        <!-- Tambahkan 60 star divs seperti di index.html -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <!-- ...repeat 58 more times... -->
+    </div>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h1>Daftar Akun</h1>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required
+                        autocomplete="username"
+                        minlength="3" 
+                        pattern="[a-zA-Z0-9_]+"
+                        title="Username hanya boleh berisi huruf, angka, dan underscore">
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" id="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" required>
+                        <span class="eye-icon" onclick="togglePassword('password')">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="password-requirements">
+                        <div class="requirement" data-requirement="uppercase">
+                            <i class="fas fa-times-circle"></i> Minimal satu huruf besar
+                        </div>
+                        <div class="requirement" data-requirement="number">
+                            <i class="fas fa-times-circle"></i> Minimal satu angka
+                        </div>
+                        <div class="requirement" data-requirement="special">
+                            <i class="fas fa-times-circle"></i> Minimal satu karakter khusus
+                        </div>
+                        <div class="requirement" data-requirement="length">
+                            <i class="fas fa-times-circle"></i> Minimal 8 karakter
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Konfirmasi Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" required>
+                        <span class="eye-icon" onclick="togglePassword('confirm-password')">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="password-match-error"></div>
+                </div>
+                <button type="submit" class="btn-primary">Daftar</button>
+            </form>
+
+            <div class="divider">atau</div>
+
+            <div class="google-signin"></div>
+
+            <p class="auth-links">
+                Sudah punya akun? <a href="login.html">Masuk</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script>
+        window.API_CONFIG = {
+            baseURL: 'http://localhost:5000/api'
+        };
+    </script>
+    <script src="../../js/auth/google-auth.js"></script>
+    <script type="module" src="../../js/api/config.js"></script>
+    <script type="module" src="../../js/utils/alert.js"></script>
+    <script type="module" src="../../js/api/auth-api.js"></script>
+    <script type="module" src="../../js/auth/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Toko Online</title>
+    <link rel="stylesheet" href="../../css/background.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/alert.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-store"></i> Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="products.html"><i class="fas fa-box"></i> Produk</a>
+                    </li>
+                    <li>
+                        <a href="orders.html"><i class="fas fa-shopping-cart"></i> Pesanan</a>
+                    </li>
+                    <li>
+                        <a href="users.html"><i class="fas fa-users"></i> Pengguna</a>
+                    </li>
+                    <li>
+                        <a href="#" id="logout" onclick="return false;"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="content-header">
+                <h1>Dashboard Admin</h1>
+            </header>
+            <div class="dashboard-stats">
+                <!-- Dashboard content will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Tambahkan base URL untuk API
+        window.API_CONFIG = {
+            baseURL: 'http://localhost:5000/api'
+        };
+
+        // Tambahkan fungsi utility
+        window.showAlert = function(message, type) {
+            alert(message); // Simplified alert for now
+        };
+    </script>
+
+    <!-- Load scripts in correct order -->
+    <script src="../../js/utils/alert.js"></script>
+    <script type="module" src="../../js/api/config.js"></script>
+    <script type="module" src="../../js/admin/dashboard.js"></script>
+</body>
+</html>

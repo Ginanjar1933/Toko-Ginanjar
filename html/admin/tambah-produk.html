@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Produk - Admin</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/admin/tambah-products.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar seperti di dashboard.html -->
+        <main class="content">
+            <header>
+                <h1>Tambah Produk Baru</h1>
+            </header>
+
+            <form class="product-form">
+                <div class="form-group">
+                    <label for="nama">Nama Produk</label>
+                    <input type="text" id="nama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" required>
+                        <!-- Kategori akan dimuat dinamis -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="harga">Harga</label>
+                    <input type="number" id="harga" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="stok">Stok</label>
+                    <input type="number" id="stok" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea id="deskripsi" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="gambar">Gambar Produk</label>
+                    <input type="file" id="gambar" accept="image/*" multiple>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Simpan</button>
+                    <button type="button" class="btn-secondary" onclick="history.back()">Batal</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <!-- JavaScript Files -->
+    <script src="../../js/api/config.js"></script>
+    <script src="../../js/api/produk-api.js"></script>
+    <script src="../../js/api/kategori-api.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/admin/tambah-produk.js"></script>
+</body>
+</html>

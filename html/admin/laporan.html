@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Penjualan - Admin</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/admin/laporan.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar seperti di dashboard.html -->
+        <main class="content">
+            <header>
+                <h1>Laporan Penjualan</h1>
+            </header>
+
+            <div class="report-filters">
+                <div class="date-range">
+                    <input type="date" id="startDate">
+                    <span>sampai</span>
+                    <input type="date" id="endDate">
+                </div>
+                <button class="btn-primary" onclick="generateReport()">Generate Laporan</button>
+                <button class="btn-secondary" onclick="exportPDF()">Export PDF</button>
+            </div>
+
+            <div class="report-summary">
+                <div class="summary-card">
+                    <h3>Total Penjualan</h3>
+                    <p id="totalSales">Rp 0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Transaksi</h3>
+                    <p id="totalTransactions">0</p>
+                </div>
+            </div>
+
+            <div class="report-details">
+                <canvas id="salesChart"></canvas>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Invoice</th>
+                                <th>Pelanggan</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sales-list">
+                            <!-- Data penjualan akan dimuat dinamis -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../../js/api/config.js"></script>
+    <script src="../../js/api/order-api.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/admin/laporan.js"></script>
+</body>
+</html>

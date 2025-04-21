@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Saya - Toko Online</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/user/akun.css">
+    <link rel="stylesheet" href="../css/user/orders.css">
+</head>
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html"><i class="fas fa-store"></i> Toko Ginanjar</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="home.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span class="tooltip">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="produk.html" class="nav-link">
+                        <i class="fas fa-box"></i>
+                        <span class="tooltip">Produk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="keranjang.html" class="nav-link" style="position: relative;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="tooltip">Keranjang</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span class="tooltip">Kontak</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#about" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span class="tooltip">Tentang</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="akun.html" class="nav-link account-display">
+                        <i class="fas fa-user"></i>
+                        <span class="tooltip">Akun Saya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="logout" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="tooltip">Keluar</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="account-page">
+        <div class="account-container">
+            <aside class="account-sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="#profile">Profil</a></li>
+                        <li><a href="#orders">Pesanan</a></li>
+                        <li><a href="#address">Alamat</a></li>
+                        <li><a href="#settings">Pengaturan</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="account-content">
+                <section id="profile" class="profile-section">
+                    <div class="user-profile-header">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar" id="user-initial"></div>
+                            <div class="avatar-upload">
+                                <label for="avatar-input">
+                                    <i class="fas fa-camera"></i>
+                                </label>
+                                <input type="file" id="avatar-input" accept="image/*" hidden>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h3 id="user-name">Nama Pengguna</h3>
+                            <p id="user-email">email@example.com</p>
+                            <p id="user-phone">+62 xxx-xxxx-xxxx</p>
+                        </div>
+                    </div>
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label for="fullname">Nama Lengkap</label>
+                            <input type="text" id="fullname" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">No. Telepon</label>
+                            <input type="tel" id="phone" placeholder="Masukkan nomor telepon">
+                        </div>
+                        <button type="submit">
+                            <i class="fas fa-save"></i> Simpan Perubahan
+                        </button>
+                    </form>
+                </section>
+
+                <section id="orders" class="orders-section">
+                    <h2>Riwayat Pesanan</h2>
+                    <div class="order-list" id="orders-list">
+                        <!-- Riwayat pesanan akan dimuat dinamis -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Toko Ginanjar</h3>
+                <p>Toko sepatu Nike original terpercaya dengan koleksi terlengkap dan terbaru.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="home.html">Beranda</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="home.html#about">Tentang Kami</a></li>
+                    <li><a href="home.html#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Serang No. 123</li>
+                    <li><i class="fas fa-phone"></i> +62 821-2762-9387</li>
+                    <li><i class="fas fa-envelope"></i> gojali.legends@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Masukkan email Anda">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Toko Ginanjar. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script>
+        window.API_CONFIG = {
+            baseURL: 'http://localhost:5000/api'
+        };
+    </script>
+    <!-- Load alert.js first -->
+    <script src="../js/utils/alert.js"></script>
+    <!-- Then load modules -->
+    <script type="module" src="../js/user/akun.js"></script>
+    <script type="module" src="../js/user/orders.js"></script>
+    <script type="module" src="../js/utils/navbarActive.js"></script>
+</body>
+</html>

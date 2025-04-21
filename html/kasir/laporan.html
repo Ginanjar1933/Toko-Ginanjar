@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Kasir - Toko Online</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/kasir/laporan.css">
+</head>
+<body>
+    <div class="kasir-container">
+        <!-- Sidebar seperti di dashboard.html -->
+        <main class="content">
+            <header>
+                <h1>Laporan Kasir</h1>
+            </header>
+
+            <div class="report-filters">
+                <input type="date" id="start-date">
+                <input type="date" id="end-date">
+                <button id="generate-report">Tampilkan Laporan</button>
+            </div>
+
+            <div class="report-summary">
+                <div class="summary-card">
+                    <h3>Total Transaksi</h3>
+                    <p id="total-transactions">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Penjualan</h3>
+                    <p id="total-sales">Rp 0</p>
+                </div>
+            </div>
+
+            <div class="transactions-list">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>No. Transaksi</th>
+                            <th>Total</th>
+                            <th>Metode Pembayaran</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactions-list">
+                        <!-- Data transaksi akan dimuat dinamis -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <!-- JavaScript Files -->
+    <script src="../../js/api/config.js"></script>
+    <script src="../../js/api/order-api.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/kasir/laporan.js"></script>
+</body>
+</html>

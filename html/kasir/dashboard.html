@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Dashboard - Toko Online</title>
+    <link rel="stylesheet" href="../../css/background.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/kasir/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-cash-register"></i> Kasir Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-shopping-cart"></i> Transaksi</a>
+                    </li>
+                    <li>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="content-header">
+                <h1>Dashboard Kasir</h1>
+            </header>
+            <div class="dashboard-stats">
+                <!-- Dashboard content will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+    <script src="../../js/kasir/dashboard.js" type="module"></script>
+</body>
+</html>

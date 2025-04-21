@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Produk - Admin</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/admin/edit-produk.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar seperti di dashboard.html -->
+        <main class="content">
+            <header>
+                <h1>Edit Produk</h1>
+            </header>
+
+            <form class="product-form" id="edit-product-form">
+                <input type="hidden" id="produk-id">
+                <!-- Form fields sama seperti tambah-produk.html -->
+                <div class="current-images">
+                    <h3>Gambar Saat Ini</h3>
+                    <div id="image-preview">
+                        <!-- Preview gambar akan dimuat dinamis -->
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Update</button>
+                    <button type="button" class="btn-secondary" onclick="history.back()">Batal</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <!-- JavaScript Files -->
+    <script src="../../js/api/config.js"></script>
+    <script src="../../js/api/produk-api.js"></script>
+    <script src="../../js/api/kategori-api.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/admin/edit-produk.js"></script>
+</body>
+</html>

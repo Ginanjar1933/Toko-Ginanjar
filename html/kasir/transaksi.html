@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi Baru - Kasir</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/kasir/transactions.css">
+</head>
+<body>
+    <div class="kasir-container">
+        <!-- Sidebar seperti di dashboard.html -->
+        <main class="content">
+            <header>
+                <h1>Transaksi Baru</h1>
+            </header>
+
+            <div class="transaction-area">
+                <div class="product-search">
+                    <input type="text" id="product-search" placeholder="Cari produk...">
+                    <div id="search-results" class="search-results">
+                        <!-- Hasil pencarian akan dimuat dinamis -->
+                    </div>
+                </div>
+
+                <div class="cart-items">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Produk</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                                <th>Total</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items-list">
+                            <!-- Item keranjang akan dimuat dinamis -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="payment-section">
+                    <div class="total-amount">
+                        <h3>Total:</h3>
+                        <h2 id="grand-total">Rp 0</h2>
+                    </div>
+                    <div class="payment-input">
+                        <label for="payment-amount">Jumlah Bayar:</label>
+                        <input type="number" id="payment-amount">
+                        <p>Kembalian: <span id="change-amount">Rp 0</span></p>
+                    </div>
+                    <button id="process-payment" class="btn-primary">Proses Pembayaran</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- JavaScript Files -->
+    <script src="../../js/api/config.js"></script>
+    <script src="../../js/api/produk-api.js"></script>
+    <script src="../../js/api/order-api.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/kasir/transaksi.js"></script>
+</body>
+</html>

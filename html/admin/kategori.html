@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Kategori - Admin</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/kategori.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar seperti di dashboard.html -->
+        <main class="content">
+            <header>
+                <h1>Manajemen Kategori</h1>
+                <button class="btn-primary" onclick="showAddModal()">Tambah Kategori</button>
+            </header>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama Kategori</th>
+                            <th>Jumlah Produk</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="category-list">
+                        <!-- Data kategori akan dimuat dinamis -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Modal Tambah/Edit Kategori -->
+            <div id="categoryModal" class="modal">
+                <div class="modal-content">
+                    <h2>Tambah Kategori</h2>
+                    <form id="categoryForm">
+                        <div class="form-group">
+                            <label for="categoryName">Nama Kategori</label>
+                            <input type="text" id="categoryName" required>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="btn-primary">Simpan</button>
+                            <button type="button" class="btn-secondary" onclick="closeModal()">Batal</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- JavaScript Files -->
+    <script src="../../js/api/config.js"></script>
+    <script src="../../js/api/kategori-api.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/admin/kategori.js"></script>
+</body>
+</html>
