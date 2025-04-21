@@ -1,5 +1,5 @@
 const CLIENT_ID = '457807159027-25ijsc4a61se4nr27vovj7aa2qlocu6l.apps.googleusercontent.com';
-const API_BASE_URL = 'http://localhost:5000/api'; // Tambahkan base URL
+const API_BASE_URL = 'https://toko-ginanjar-production.up.railway.app'; // Tambahkan base URL
 
 function handleCredentialResponse(response) {
     try {
