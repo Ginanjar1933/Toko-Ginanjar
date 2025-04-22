@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         showAlert('Berhasil keluar', 'success');
         
         setTimeout(() => {
-            window.location.href = '../html/index.html';
+            window.location.href = '/index.html';
         }, 1000);
     });
 
