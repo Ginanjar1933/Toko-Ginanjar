@@ -3,34 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initSalesChart();
     loadRecentOrders();
 
-    // Tambahkan event listener untuk tombol logout
-    const logoutButton = document.getElementById('logout');
-    if (logoutButton) {
-        logoutButton.addEventListener('click', (e) => {
-            e.preventDefault();
             
-            // Konfirmasi logout
-            if (confirm('Apakah Anda yakin ingin keluar?')) {
-                try {
-                    // Hapus data login
-                    localStorage.clear();
-                    sessionStorage.clear();
-                    
-                    // Tampilkan pesan sukses
-                    window.showAlert('Berhasil keluar dari sistem', 'success');
-                    
-                    // Redirect ke halaman login
-                    setTimeout(() => {
-                        window.location.replace('../../html/auth/login.html');
-                    }, 1000);
-                } catch (error) {
-                    console.error('Logout error:', error);
-                    window.showAlert('Gagal keluar dari sistem', 'error');
-                }
-            }
-        });
-    }
-});
+    // Handle logout
+    document.getElementById('logout').addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        
+        showAlert('Berhasil keluar', 'success');
+        
+        setTimeout(() => {
+            window.location.href = '/index.html';
+        }, 1000);
+    });
 
 async function loadDashboardStats() {
     try {
