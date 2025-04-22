@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.showAlert('Berhasil keluar', 'success');
         
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         }, 1000);
     });
 
