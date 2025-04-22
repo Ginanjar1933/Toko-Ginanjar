@@ -1,3 +1,5 @@
+import { API_CONFIG, fetchAPI } from '../api/config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     loadDashboardStats();
     initSalesChart();
