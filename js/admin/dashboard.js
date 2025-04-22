@@ -3,21 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     initSalesChart();
     loadRecentOrders();
 
-            
     // Handle logout
     document.getElementById('logout').addEventListener('click', (e) => {
         e.preventDefault();
         
+        // Hapus data auth dari localStorage
         localStorage.removeItem('token');
         localStorage.removeItem('user');
         
+        // Tampilkan pesan sukses
         showAlert('Berhasil keluar', 'success');
         
+        // Redirect ke halaman index dengan path yang benar
         setTimeout(() => {
-            window.location.href = '/index.html';
+            window.location.href = '/index.html';  // Perbaiki path
         }, 1000);
     });
-
+    
 async function loadDashboardStats() {
     try {
         const response = await fetch(`${CONFIG.API_URL}/admin/stats`, {
