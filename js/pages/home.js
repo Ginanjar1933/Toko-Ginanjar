@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Redirect ke halaman index dengan path yang benar
         setTimeout(() => {
-            window.location.href = 'index.html';  // Perbaiki path
+            window.location.href = '/index.html';  // Perbaiki path
         }, 1000);
     });
 
