@@ -1,4 +1,5 @@
 import { API_CONFIG, fetchAPI } from '../api/config.js';
+import AuthAPI from '../api/auth-api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadDashboardStats();
