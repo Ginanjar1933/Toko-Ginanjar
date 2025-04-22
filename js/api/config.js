@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-    baseURL: 'https://toko-ginanjar-production.up.railway.app'
+    baseURL: 'https://toko-ginanjar-production.up.railway.app/api'
 };
 
 export async function fetchAPI(endpoint, options = {}) {
