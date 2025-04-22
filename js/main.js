@@ -115,7 +115,7 @@ function initializeNavbar() {
             localStorage.removeItem('user');
             showAlert('Berhasil keluar', 'success');
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = '/index.html';
             }, 1000);
         });
     }
